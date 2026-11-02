@@ -698,6 +698,11 @@ $("sp-reveal").addEventListener("click", () => {
 });
 $("sp-skip").addEventListener("click", spNext);
 
+// ---------- Service Worker（PWA 离线可用，网络优先保证最新） ----------
+if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register("./sw.js").catch(err => console.warn("SW register failed", err));
+}
+
 // ---------- Init（分段保护：一段出错不影响其他功能） ----------
 function safeInit(label, fn) { try { fn(); } catch (err) { console.error("Init failed: " + label, err); } }
 
