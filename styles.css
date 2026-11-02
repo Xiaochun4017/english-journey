@@ -298,6 +298,32 @@ main { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 28px 20p
 .quiz-result p { margin-bottom: 8px; color: var(--ink-soft); }
 .quiz-result .btn { margin-top: 10px; }
 
+/* ---- Spelling practice ---- */
+.sp-box { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); max-width: 560px; margin: 0 auto; }
+.sp-progress { font-size: 13px; color: var(--ink-soft); margin-bottom: 14px; }
+.sp-prompt { background: #faf5ee; border-radius: 10px; padding: 16px; margin-bottom: 14px; }
+.sp-meaning { font-size: 22px; font-weight: 700; color: var(--accent-deep); }
+.sp-hint { font-size: 13px; color: var(--ink-soft); margin-top: 6px; }
+.sp-input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--ink);
+}
+.sp-input:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+.sp-input.correct { border-color: var(--good); background: #eef5ee; }
+.sp-input.wrong { border-color: var(--bad); background: #f9eeee; }
+.sp-feedback { min-height: 28px; font-size: 14px; margin: 12px 0; }
+.sp-feedback.ok { color: var(--good); }
+.sp-feedback.no { color: var(--bad); }
+.sp-answer { font-size: 16px; font-weight: 700; color: var(--accent-deep); }
+.sp-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.sp-score { font-size: 13px; color: var(--ink-soft); margin-top: 14px; }
+
 /* ---- Footer ---- */
 .footer { text-align: center; padding: 18px; font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--line); }
 
