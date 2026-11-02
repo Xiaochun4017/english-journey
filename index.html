@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="English Journey 英语进阶 — 从零基础到大学与雅思，涵盖职场、日常、旅游的英语学习站">
+    <title>English Journey · 英语进阶</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="brand">
+        <span class="logo">EJ</span>
+        <div>
+            <h1>English Journey</h1>
+            <p>英语进阶 · 从零基础到雅思</p>
+        </div>
+    </div>
+    <nav class="tabs" id="tabs">
+        <button class="tab active" data-tab="home">🏠 首页</button>
+        <button class="tab" data-tab="beginner">🌱 零基础</button>
+        <button class="tab" data-tab="elementary">🌿 初级</button>
+        <button class="tab" data-tab="intermediate">🌳 中级</button>
+        <button class="tab" data-tab="academic">🎓 大学/学术</button>
+        <button class="tab" data-tab="ielts">📝 雅思 IELTS</button>
+        <button class="tab" data-tab="career">💼 职场</button>
+        <button class="tab" data-tab="daily">🏘️ 日常生活</button>
+        <button class="tab" data-tab="travel">✈️ 旅游</button>
+        <button class="tab" data-tab="flashcards">📚 词汇卡</button>
+        <button class="tab" data-tab="quiz">✏️ 自测</button>
+    </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ HOME ============ -->
+<section class="panel active" id="panel-home">
+    <div class="hero">
+        <h2>每天进步一点点，<br>英文 journey 从这里开始。</h2>
+        <p class="hero-sub">纯文字学习 · 中文讲解 + 英文例句 · 进度自动保存</p>
+    </div>
+    <div class="path-grid">
+        <div class="path-card" data-jump="beginner">
+            <span class="step">第 1 步</span>
+            <h3>🌱 零基础起步</h3>
+            <p>26 个字母、音标入门、数字、颜色、打招呼。完全没学过也能看懂。</p>
+        </div>
+        <div class="path-card" data-jump="elementary">
+            <span class="step">第 2 步</span>
+            <h3>🌿 初级语法与句型</h3>
+            <p>一般现在时/过去时、疑问句、日常对话套路。能开口说简单句。</p>
+        </div>
+        <div class="path-card" data-jump="intermediate">
+            <span class="step">第 3 步</span>
+            <h3>🌳 中级进阶</h3>
+            <p>从句、时态进阶、短语动词、连接词。表达更完整自然。</p>
+        </div>
+        <div class="path-card" data-jump="academic">
+            <span class="step">第 4 步</span>
+            <h3>🎓 大学 / 学术英语</h3>
+            <p>学术词汇、Essay 结构、摘要写作、课堂常用语。</p>
+        </div>
+        <div class="path-card" data-jump="ielts">
+            <span class="step">第 5 步</span>
+            <h3>📝 雅思 IELTS</h3>
+            <p>考试结构、四项备考策略、写作模板、口语题库（文字版）。</p>
+        </div>
+        <div class="path-card" data-jump="career">
+            <span class="step">实用主题</span>
+            <h3>💼 职场英语</h3>
+            <p>写邮件、开会、面试、简历，高频表达直接套用。</p>
+        </div>
+        <div class="path-card" data-jump="daily">
+            <span class="step">实用主题</span>
+            <h3>🏘️ 日常生活</h3>
+            <p>买东西、点餐、看病、闲聊，出门就能用。</p>
+        </div>
+        <div class="path-card" data-jump="travel">
+            <span class="step">实用主题</span>
+            <h3>✈️ 旅游英语</h3>
+            <p>机场、酒店、问路、餐厅、紧急情况，一句话救急。</p>
+        </div>
+    </div>
+    <div class="tip-box">
+        <strong>📌 学习建议</strong>
+        <ul>
+            <li>先沿「第 1 → 5 步」打基础，实用主题随时穿插学。</li>
+            <li>每天用「词汇卡」翻 20 张，用「自测」巩固。</li>
+            <li>所有进度自动保存在本机，下次打开接着学。</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ BEGINNER ============ -->
+<section class="panel" id="panel-beginner">
+    <h2 class="sec-title">🌱 零基础起步</h2>
+
+    <div class="lesson">
+        <h3>1. 字母表 Alphabet</h3>
+        <div class="alphabet" id="alphabet"></div>
+        <p class="note">每个字母下方是「读音提示」（用中文近似音标注意，仅帮助记忆，准确发音请对照音标表）。</p>
+    </div>
+
+    <div class="lesson">
+        <h3>2. 音标入门 Phonetics（文字版）</h3>
+        <table class="tbl">
+            <thead><tr><th>音标</th><th>读音提示</th><th>例词</th><th>例词读音提示</th></tr></thead>
+            <tbody>
+                <tr><td>/iː/</td><td>长「衣」</td><td>see, tree</td><td>西—，初—</td></tr>
+                <tr><td>/ɪ/</td><td>短促「衣」</td><td>sit, big</td><td>西斯，比格</td></tr>
+                <tr><td>/e/</td><td>「哎」（扁口）</td><td>bed, ten</td><td>拜德，太恩</td></tr>
+                <tr><td>/æ/</td><td>「啊」张大嘴</td><td>cat, map</td><td>卡特，马普</td></tr>
+                <tr><td>/ɑː/</td><td>长「阿」</td><td>car, far</td><td>卡—，法—</td></tr>
+                <tr><td>/ɔː/</td><td>长「哦」</td><td>door, more</td><td>多—，莫—</td></tr>
+                <tr><td>/uː/</td><td>长「乌」</td><td>food, blue</td><td>福—德，布—鲁</td></tr>
+                <tr><td>/ʌ/</td><td>短「啊」放松</td><td>cup, sun</td><td>卡普，桑</td></tr>
+                <tr><td>/ɜː/</td><td>卷舌「儿」</td><td>bird, work</td><td>伯—德，沃—克</td></tr>
+                <tr><td>/ə/</td><td>轻读「呃」</td><td>about, sofa</td><td>呃拜乌特，叟呃发</td></tr>
+            </tbody>
+        </table>
+        <p class="note">学音标先记住 10 个元音就够入门；辅音大多和拼音接近（如 /b/ /p/ /m/ /f/）。</p>
+    </div>
+
+    <div class="lesson">
+        <h3>3. 打招呼 Greetings</h3>
+        <div class="phrase-list" id="greetings"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>4. 数字 Numbers</h3>
+        <div class="num-grid" id="numbers"></div>
+        <div class="rule-box">
+            <strong>数字规律：</strong>
+            <p>13–19 都以 <b>-teen</b> 结尾（thir<b>teen</b>, four<b>teen</b>…）；20–90 的整十数都以 <b>-ty</b> 结尾（twen<b>ty</b>, thir<b>ty</b>…）。<br>
+            百 = hundred：300 = three hundred；千 = thousand：5,000 = five thousand。</p>
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>5. 颜色与常用物 Colors &amp; Things</h3>
+        <div class="color-row" id="colors"></div>
+    </div>
+</section>
+
+<!-- ============ ELEMENTARY ============ -->
+<section class="panel" id="panel-elementary">
+    <h2 class="sec-title">🌿 初级语法与句型</h2>
+
+    <div class="lesson">
+        <h3>1. 句子的骨架：主语 + 动词</h3>
+        <div class="rule-box">
+            <p>英语句子必须有主语和动词：<b>I work. / She sleeps. / We talk.</b></p>
+            <p>be 动词（am / is / are）=「是/在」：I <b>am</b> a student. · She <b>is</b> happy. · They <b>are</b> here.</p>
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>2. 三大基础时态</h3>
+        <table class="tbl">
+            <thead><tr><th>时态</th><th>用法</th><th>例句</th><th>中文</th></tr></thead>
+            <tbody>
+                <tr><td>一般现在时</td><td>习惯、事实</td><td>I <b>drink</b> tea every morning.</td><td>我每天早上喝茶。</td></tr>
+                <tr><td>一般过去时</td><td>过去发生的事</td><td>I <b>drank</b> tea yesterday.</td><td>我昨天喝了茶。</td></tr>
+                <tr><td>一般将来时</td><td>将要做的事</td><td>I <b>will drink</b> tea tomorrow.</td><td>我明天会喝茶。</td></tr>
+            </tbody>
+        </table>
+        <div class="rule-box">
+            <strong>动词过去式两条路：</strong>
+            <p>① 规则变化 +ed：work→work<b>ed</b>, play→play<b>ed</b>, stop→sto<b>pped</b><br>
+            ② 不规则变化要背：go→<b>went</b>, eat→<b>ate</b>, see→<b>saw</b>, have→<b>had</b>, buy→<b>bought</b></p>
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>3. 疑问句三件套</h3>
+        <div class="phrase-list" id="questions"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>4. 日常小对话</h3>
+        <div class="dialog">
+            <p><b>A:</b> Hi! How are you? <span class="cn">（嗨！你好吗？）</span></p>
+            <p><b>B:</b> I'm good, thanks. And you? <span class="cn">（我很好，谢谢。你呢？）</span></p>
+            <p><b>A:</b> Pretty good. What are you doing today? <span class="cn">（挺好的。你今天做什么？）</span></p>
+            <p><b>B:</b> I'm going shopping. Do you want to come? <span class="cn">（我要去买东西。你想一起来吗？）</span></p>
+            <p><b>A:</b> Sure, let's go! <span class="cn">（当然，走吧！）</span></p>
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>5. 100 个必会动词（节选 30）</h3>
+        <div class="chip-cloud" id="verbs"></div>
+    </div>
+</section>
+
+<!-- ============ INTERMEDIATE ============ -->
+<section class="panel" id="panel-intermediate">
+    <h2 class="sec-title">🌳 中级进阶</h2>
+
+    <div class="lesson">
+        <h3>1. 进阶时态</h3>
+        <table class="tbl">
+            <thead><tr><th>时态</th><th>用法</th><th>例句</th><th>中文</th></tr></thead>
+            <tbody>
+                <tr><td>现在进行时</td><td>正在发生</td><td>I <b>am reading</b> a novel now.</td><td>我现在正在读小说。</td></tr>
+                <tr><td>现在完成时</td><td>过去发生、影响现在</td><td>I <b>have finished</b> my homework.</td><td>我已经写完作业了。</td></tr>
+                <tr><td>过去进行时</td><td>过去某刻正在进行</td><td>I <b>was cooking</b> when he called.</td><td>他打电话时我在做饭。</td></tr>
+                <tr><td>过去完成时</td><td>过去的过去</td><td>She <b>had left</b> before I arrived.</td><td>我到之前她已经走了。</td></tr>
+            </tbody>
+        </table>
+        <div class="rule-box">
+            <strong>现在完成时 = have/has + 过去分词</strong>，信号词：already（已经）、yet（还）、just（刚刚）、ever（曾经）、since/for（自从/长达）。<br>
+            例：I <b>have lived</b> here <b>for</b> five years.（我住在这里五年了。）
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>2. 从句：让句子变高级</h3>
+        <div class="rule-box">
+            <p><b>定语从句（who / which / that）</b>：The book <b>that</b> I bought yesterday is great.（我昨天买的那本书很棒。）</p>
+            <p><b>条件句 if</b>：If it <b>rains</b>, I <b>will stay</b> home.（如果下雨，我就待在家。）——主句将来时，if 句用现在时。</p>
+            <p><b>原因/结果</b>：I stayed home <b>because</b> I was tired. → I was tired, <b>so</b> I stayed home.</p>
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>3. 高频短语动词 Phrasal Verbs</h3>
+        <div class="phrase-list" id="phrasals"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>4. 连接词：写作和口语的胶水</h3>
+        <table class="tbl">
+            <thead><tr><th>功能</th><th>连接词</th><th>例句</th></tr></thead>
+            <tbody>
+                <tr><td>递进</td><td>moreover, furthermore, in addition</td><td>Moreover, the plan saves money.</td></tr>
+                <tr><td>转折</td><td>however, nevertheless, on the other hand</td><td>However, not everyone agrees.</td></tr>
+                <tr><td>因果</td><td>therefore, as a result, consequently</td><td>Therefore, we must act now.</td></tr>
+                <tr><td>举例</td><td>for instance, such as, namely</td><td>For instance, cars and buses.</td></tr>
+                <tr><td>总结</td><td>in conclusion, overall, to sum up</td><td>In conclusion, it is worth it.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ============ ACADEMIC ============ -->
+<section class="panel" id="panel-academic">
+    <h2 class="sec-title">🎓 大学 / 学术英语</h2>
+
+    <div class="lesson">
+        <h3>1. 学术 Essay 四段结构</h3>
+        <div class="structure">
+            <div class="struct-block"><b>Introduction 引言</b><p>背景 1–2 句 → 点明话题 → <b>thesis statement 主旨句</b>（全文观点）。<br>例：This essay will argue that remote work benefits both companies and employees.</p></div>
+            <div class="struct-block"><b>Body Paragraph 主体段（2–3 段）</b><p>每段 = <b>Topic sentence 主旨句</b> + 论据/例子 + 分析 + 小结。<br>例：First, remote work increases productivity. A 2023 study found that…</p></div>
+            <div class="struct-block"><b>Conclusion 结论</b><p>重申主旨 + 概括论点 + 呼吁/展望。<br>例：In conclusion, remote work is not a trend but the future of work.</p></div>
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>2. 学术高频词汇 Academic Word List（节选）</h3>
+        <table class="tbl">
+            <thead><tr><th>单词</th><th>词性</th><th>意思</th><th>学术例句</th></tr></thead>
+            <tbody>
+                <tr><td>analyze</td><td>v.</td><td>分析</td><td>The study analyzes data from 500 participants.</td></tr>
+                <tr><td>significant</td><td>adj.</td><td>显著的</td><td>There was a significant improvement in scores.</td></tr>
+                <tr><td>evidence</td><td>n.</td><td>证据</td><td>The evidence supports this hypothesis.</td></tr>
+                <tr><td>approach</td><td>n./v.</td><td>方法；处理</td><td>We adopted a new approach to teaching.</td></tr>
+                <tr><td>factor</td><td>n.</td><td>因素</td><td>Culture is a key factor in learning.</td></tr>
+                <tr><td>framework</td><td>n.</td><td>框架</td><td>This paper proposes a new framework.</td></tr>
+                <tr><td>implication</td><td>n.</td><td>影响/含义</td><td>The implications of this finding are broad.</td></tr>
+                <tr><td>hypothesis</td><td>n.</td><td>假设</td><td>Our hypothesis was confirmed.</td></tr>
+                <tr><td>methodology</td><td>n.</td><td>研究方法</td><td>Chapter 3 explains the methodology.</td></tr>
+                <tr><td>consequently</td><td>adv.</td><td>因此</td><td>Costs rose; consequently, profits fell.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="lesson">
+        <h3>3. 课堂常用语 Classroom English</h3>
+        <div class="phrase-list" id="classroom"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>4. 摘要写作 Summary 三步法</h3>
+        <div class="rule-box">
+            <p>① <b>找主旨</b>：每段第一句 + 最后一句，确定核心观点。<br>
+            ② <b>删细节</b>：去掉例子、数据、重复内容，只留论点。<br>
+            ③ <b>换说法</b>：用自己的词改写（paraphrase），不能抄原句。</p>
+            <p>模板：The author argues that… / According to the passage, … / The main idea is that…</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ IELTS ============ -->
+<section class="panel" id="panel-ielts">
+    <h2 class="sec-title">📝 雅思 IELTS</h2>
+
+    <div class="lesson">
+        <h3>1. 考试结构一览</h3>
+        <table class="tbl">
+            <thead><tr><th>科目</th><th>时长</th><th>内容</th><th>关键点</th></tr></thead>
+            <tbody>
+                <tr><td>听力 Listening</td><td>约 30 分钟</td><td>4 部分 40 题</td><td>先读题预测答案类型（人名/数字/地点）</td></tr>
+                <tr><td>阅读 Reading</td><td>60 分钟</td><td>3 篇 40 题</td><td>先看题再读文，定位关键词</td></tr>
+                <tr><td>写作 Writing</td><td>60 分钟</td><td>Task 1（图表/书信）+ Task 2（议论文）</td><td>Task 2 占 2/3 分值，先写它</td></tr>
+                <tr><td>口语 Speaking</td><td>11–14 分钟</td><td>Part 1 问答 / Part 2 独白 / Part 3 讨论</td><td>流利度 &gt; 完美语法，多说别停</td></tr>
+            </tbody>
+        </table>
+        <div class="rule-box"><strong>评分 0–9 分：</strong>6 分=合格使用者，6.5–7=大部分学校要求线，7+ 属于良好。听力和阅读按对题数换算（约 30/40 → 7 分）。</div>
+    </div>
+
+    <div class="lesson">
+        <h3>2. 四项备考策略</h3>
+        <div class="strategy-grid">
+            <div class="strat-card"><h4>🎧 听力</h4><p>每天精听 1 篇剑桥真题：先盲听抓大意 → 逐句听写 → 对照原文查漏。注意单复数和拼写，错一个字母就丢分。</p></div>
+            <div class="strat-card"><h4>📖 阅读</h4><p>三步定位法：读题画关键词 → 回文定位同义替换 → 精读该句。同义替换是雅思阅读的核心考点（important ↔ crucial）。</p></div>
+            <div class="strat-card"><h4>✍️ 写作</h4><p>Task 2 背熟四段式模板（观点类/讨论类/利弊类各一）。考前至少动笔写 10 篇并找人批改，否则分数很难上 6。</p></div>
+            <div class="strat-card"><h4>🗣️ 口语</h4><p>按季度题库准备素材（一材多用）。Part 2 用「故事化」结构：时间地点人物事件感受。录音自查（用手机打字记录代替也可）。</p></div>
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>3. Task 2 议论文四段模板</h3>
+        <div class="structure">
+            <div class="struct-block"><b>第 1 段 · Introduction</b><p>改写题目 + 亮明观点。<br>It is often argued that … I completely agree/disagree with this view because …</p></div>
+            <div class="struct-block"><b>第 2 段 · 观点 1</b><p>Firstly, … For example, … This demonstrates that …</p></div>
+            <div class="struct-block"><b>第 3 段 · 观点 2</b><p>Secondly, … A case in point is … As a result, …</p></div>
+            <div class="struct-block"><b>第 4 段 · Conclusion</b><p>In conclusion, although …, I believe that … because …</p></div>
+        </div>
+        <div class="rule-box"><strong>高分词组：</strong>a double-edged sword（双刃剑）· play a vital role in（起关键作用）· this trend is likely to continue（趋势或将持续）· from my perspective（在我看来）</div>
+    </div>
+
+    <div class="lesson">
+        <h3>4. 口语 Part 1 高频题库（文字版）</h3>
+        <div class="phrase-list" id="ielts-speaking"></div>
+        <p class="note">回答公式：<b>直接回答 + 1 个原因 + 1 个例子</b>（3 句话）。<br>例：Do you like reading? → Yes, I do. It helps me relax after work. I usually read novels before bed.</p>
+    </div>
+
+    <div class="lesson">
+        <h3>5. 雅思核心词汇（按话题）</h3>
+        <div class="chip-cloud" id="ielts-vocab"></div>
+    </div>
+</section>
+
+<!-- ============ CAREER ============ -->
+<section class="panel" id="panel-career">
+    <h2 class="sec-title">💼 职场英语</h2>
+
+    <div class="lesson">
+        <h3>1. 写邮件套路</h3>
+        <div class="phrase-list" id="email"></div>
+        <div class="rule-box">
+            <strong>邮件结构：</strong>主题行写清目的（Meeting Request: Q3 Budget）→ 开头问候 → 说明来意（I'm writing to…）→ 具体内容（分点）→ 结尾行动项（Could you… by Friday?）→ Best regards, + 名字
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>2. 开会高频表达</h3>
+        <div class="phrase-list" id="meeting"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>3. 面试问答</h3>
+        <div class="phrase-list" id="interview"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>4. 简历动作动词（Resume Verbs）</h3>
+        <div class="chip-cloud" id="resume-verbs"></div>
+        <p class="note">写简历用动词开头，不用 "I"：Managed a team of five · Increased sales by 30% · Designed a new workflow.</p>
+    </div>
+</section>
+
+<!-- ============ DAILY ============ -->
+<section class="panel" id="panel-daily">
+    <h2 class="sec-title">🏘️ 日常生活</h2>
+
+    <div class="lesson">
+        <h3>1. 买东西 Shopping</h3>
+        <div class="phrase-list" id="shopping"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>2. 点餐 Restaurant</h3>
+        <div class="phrase-list" id="restaurant"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>3. 看病 Health</h3>
+        <div class="phrase-list" id="health"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>4. 闲聊 Small Talk</h3>
+        <div class="dialog">
+            <p><b>A:</b> Nice weather today, isn't it? <span class="cn">（今天天气不错，是吧？）</span></p>
+            <p><b>B:</b> Yeah, perfect for a walk. <span class="cn">（是啊，适合散步。）</span></p>
+            <p><b>A:</b> Do you come here often? <span class="cn">（你常来这儿吗？）</span></p>
+            <p><b>B:</b> Most weekends. It's my favorite spot. <span class="cn">（基本每周末。这是我最喜欢的地方。）</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TRAVEL ============ -->
+<section class="panel" id="panel-travel">
+    <h2 class="sec-title">✈️ 旅游英语</h2>
+
+    <div class="lesson">
+        <h3>1. 机场 Airport</h3>
+        <div class="phrase-list" id="airport"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>2. 酒店 Hotel</h3>
+        <div class="phrase-list" id="hotel"></div>
+    </div>
+
+    <div class="lesson">
+        <h3>3. 问路 Directions</h3>
+        <div class="phrase-list" id="directions"></div>
+        <div class="rule-box">
+            <strong>听得懂的方向词：</strong>go straight（直走）· turn left/right（左/右转）· next to（在…旁边）· across from（在…对面）· two blocks away（过两个街区）· on the corner（在拐角）
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h3>4. 紧急情况 Emergency（背下来！）</h3>
+        <div class="phrase-list" id="emergency"></div>
+    </div>
+</section>
+
+<!-- ============ FLASHCARDS ============ -->
+<section class="panel" id="panel-flashcards">
+    <h2 class="sec-title">📚 词汇卡</h2>
+    <div class="fc-controls">
+        <label>分类：
+            <select id="fc-category">
+                <option value="all">全部</option>
+                <option value="基础">基础</option>
+                <option value="日常">日常</option>
+                <option value="职场">职场</option>
+                <option value="旅游">旅游</option>
+                <option value="学术/雅思">学术/雅思</option>
+            </select>
+        </label>
+        <button class="btn" id="fc-shuffle">🔀 洗牌</button>
+        <button class="btn" id="fc-reset">↺ 重新开始</button>
+    </div>
+    <p class="fc-progress" id="fc-progress"></p>
+    <div class="flashcard" id="flashcard">
+        <div class="fc-face fc-front">
+            <span class="fc-cat" id="fc-cat"></span>
+            <div class="fc-word" id="fc-word"></div>
+            <p class="fc-hint">点击卡片看释义 ↓</p>
+        </div>
+        <div class="fc-face fc-back">
+            <div class="fc-meaning" id="fc-meaning"></div>
+            <div class="fc-example" id="fc-example"></div>
+        </div>
+    </div>
+    <div class="fc-btns">
+        <button class="btn ghost" id="fc-prev">← 上一个</button>
+        <button class="btn primary" id="fc-known">✓ 认识了</button>
+        <button class="btn ghost" id="fc-next">下一个 →</button>
+    </div>
+    <p class="fc-known-count" id="fc-known-count"></p>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="panel" id="panel-quiz">
+    <h2 class="sec-title">✏️ 自测</h2>
+    <div class="quiz-box" id="quiz-box">
+        <p class="quiz-progress" id="quiz-progress"></p>
+        <div class="quiz-question" id="quiz-question"></div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-feedback" id="quiz-feedback"></div>
+        <button class="btn primary hidden" id="quiz-next">下一题 →</button>
+    </div>
+    <div class="quiz-result hidden" id="quiz-result">
+        <h3>🎉 完成！</h3>
+        <p id="quiz-score"></p>
+        <p id="quiz-best"></p>
+        <button class="btn primary" id="quiz-restart">再测一轮</button>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>English Journey · 纯文字学习站 · 进度保存在本机浏览器</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
