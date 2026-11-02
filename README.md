@@ -14,8 +14,14 @@ Live site: https://xiaochun4017.github.io/english-journey/
 - 💼 职场：邮件、会议、面试、简历动词
 - 🏘️ 日常生活：购物、点餐、看病、闲聊
 - ✈️ 旅游：机场、酒店、问路、紧急情况
-- 📚 词汇卡：分类翻卡，进度本地保存
+- 📚 词汇卡：100 张分类翻卡，进度本地保存
 - ✏️ 自测：随机选择题，记录历史最佳
+- 📅 每日打卡：连续天数、最近 7 天记录、累计天数
+- 🌟 今日单词：按日期轮换，可手动换
+
+## Desktop App
+
+`~/Desktop/English Journey.app` — Chrome app 模式打开线上站，每次启动带时间戳参数强制加载最新版。
 
 ## Development
 

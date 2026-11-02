@@ -272,6 +272,86 @@ const FLASHCARDS = [
     { cat: "学术/雅思", w: "controversial", m: "有争议的", ex: "This is a controversial topic." },
     { cat: "学术/雅思", w: "advocate", m: "提倡；主张", ex: "Many experts advocate remote work." },
     { cat: "学术/雅思", w: "phenomenon", m: "现象", ex: "This phenomenon is worth studying." },
+    // 基础 · 第二批
+    { cat: "基础", w: "thank", m: "感谢", ex: "Thank you for your help." },
+    { cat: "基础", w: "please", m: "请", ex: "Please sit down." },
+    { cat: "基础", w: "school", m: "学校", ex: "My son goes to school by bus." },
+    { cat: "基础", w: "work", m: "工作；上班", ex: "I go to work at eight." },
+    { cat: "基础", w: "house", m: "房子", ex: "Their house is near the park." },
+    { cat: "基础", w: "money", m: "钱", ex: "I saved money for the trip." },
+    { cat: "基础", w: "city", m: "城市", ex: "Shanghai is a big city." },
+    { cat: "基础", w: "week", m: "星期；周", ex: "See you next week." },
+    { cat: "基础", w: "year", m: "年", ex: "Happy New Year!" },
+    { cat: "基础", w: "today", m: "今天", ex: "Today is Monday." },
+    { cat: "基础", w: "tomorrow", m: "明天", ex: "I'll call you tomorrow." },
+    { cat: "基础", w: "beautiful", m: "美丽的", ex: "What a beautiful garden!" },
+    { cat: "基础", w: "difficult", m: "困难的", ex: "English grammar is not that difficult." },
+    { cat: "基础", w: "easy", m: "容易的", ex: "This exercise is easy." },
+    { cat: "基础", w: "new", m: "新的", ex: "I bought a new phone." },
+    // 日常 · 第二批
+    { cat: "日常", w: "budget", m: "预算", ex: "My budget for food is 500 yuan a week." },
+    { cat: "日常", w: "laundry", m: "洗衣；待洗衣物", ex: "I do laundry on Saturdays." },
+    { cat: "日常", w: "recipe", m: "食谱", ex: "Can you share this recipe with me?" },
+    { cat: "日常", w: "symptom", m: "症状", ex: "What are your symptoms?" },
+    { cat: "日常", w: "delivery", m: "配送；快递", ex: "The delivery arrives tomorrow." },
+    { cat: "日常", w: "hobby", m: "爱好", ex: "Painting is my favorite hobby." },
+    { cat: "日常", w: "trash", m: "垃圾", ex: "Take out the trash, please." },
+    { cat: "日常", w: "exercise", m: "锻炼；练习", ex: "I exercise three times a week." },
+    { cat: "日常", w: "chore", m: "家务", ex: "We share the chores at home." },
+    { cat: "日常", w: "party", m: "聚会", ex: "Are you coming to the party?" },
+    { cat: "日常", w: "gift", m: "礼物", ex: "I bought a gift for her birthday." },
+    { cat: "日常", w: "rest", m: "休息", ex: "You should take a rest." },
+    { cat: "日常", w: "library", m: "图书馆", ex: "I study at the library." },
+    { cat: "日常", w: "market", m: "市场", ex: "Fresh vegetables at the market." },
+    { cat: "日常", w: "pharmacy", m: "药店", ex: "The pharmacy closes at 10 pm." },
+    // 职场 · 第二批
+    { cat: "职场", w: "promotion", m: "晋升", ex: "She got a promotion last month." },
+    { cat: "职场", w: "salary", m: "薪水", ex: "They offered a higher salary." },
+    { cat: "职场", w: "client", m: "客户", ex: "The client approved the proposal." },
+    { cat: "职场", w: "proposal", m: "提案；方案", ex: "I'll send the proposal today." },
+    { cat: "职场", w: "conference", m: "会议；大会", ex: "He is at a conference in Beijing." },
+    { cat: "职场", w: "colleague", m: "同事", ex: "My colleagues are very supportive." },
+    { cat: "职场", w: "priority", m: "优先事项", ex: "This task is our top priority." },
+    { cat: "职场", w: "collaborate", m: "协作", ex: "The two teams collaborate closely." },
+    { cat: "职场", w: "outsource", m: "外包", ex: "We outsource the design work." },
+    { cat: "职场", w: "evaluate", m: "评估", ex: "We will evaluate the results next week." },
+    { cat: "职场", w: "benefit", m: "福利；好处", ex: "The job comes with good benefits." },
+    { cat: "职场", w: "resign", m: "辞职", ex: "He resigned for personal reasons." },
+    { cat: "职场", w: "workload", m: "工作量", ex: "My workload is heavy this month." },
+    { cat: "职场", w: "achievement", m: "成就；业绩", ex: "List your achievements on the resume." },
+    { cat: "职场", w: "productive", m: "高效的", ex: "Morning hours are my productive time." },
+    // 旅游 · 第二批
+    { cat: "旅游", w: "passport", m: "护照", ex: "Keep your passport safe." },
+    { cat: "旅游", w: "visa", m: "签证", ex: "Do I need a visa for this country?" },
+    { cat: "旅游", w: "customs", m: "海关", ex: "We cleared customs quickly." },
+    { cat: "旅游", w: "departure", m: "出发；离境", ex: "Check the departure time online." },
+    { cat: "旅游", w: "arrival", m: "到达", ex: "The arrival time is 3 pm." },
+    { cat: "旅游", w: "baggage claim", m: "行李提取处", ex: "Meet me at baggage claim." },
+    { cat: "旅游", w: "hostel", m: "青年旅舍", ex: "Hostels are cheaper than hotels." },
+    { cat: "旅游", w: "landmark", m: "地标", ex: "The tower is a famous landmark." },
+    { cat: "旅游", w: "guidebook", m: "旅行指南", ex: "I bought a guidebook at the airport." },
+    { cat: "旅游", w: "exchange", m: "兑换", ex: "Where can I exchange money?" },
+    { cat: "旅游", w: "scenic", m: "风景优美的", ex: "This is a scenic route along the coast." },
+    { cat: "旅游", w: "vacant", m: "空着的", ex: "Are there any vacant rooms tonight?" },
+    { cat: "旅游", w: "aisle", m: "过道（座位）", ex: "I'd like an aisle seat, please." },
+    { cat: "旅游", w: "window seat", m: "靠窗座位", ex: "She prefers a window seat." },
+    { cat: "旅游", w: "lost and found", m: "失物招领处", ex: "Check the lost and found office." },
+    // 学术/雅思 · 第二批
+    { cat: "学术/雅思", w: "academy", m: "学院；研究院", ex: "She studies at a music academy." },
+    { cat: "学术/雅思", w: "criterion", m: "标准（复数 criteria）", ex: "What are the criteria for grading?" },
+    { cat: "学术/雅思", w: "deteriorate", m: "恶化", ex: "Air quality deteriorated last winter." },
+    { cat: "学术/雅思", w: "emphasis", m: "重点；强调", ex: "The course places emphasis on writing." },
+    { cat: "学术/雅思", w: "inevitable", m: "不可避免的", ex: "Some change is inevitable." },
+    { cat: "学术/雅思", w: "justify", m: "证明……合理", ex: "The data justifies the conclusion." },
+    { cat: "学术/雅思", w: "maintain", m: "维持；坚持认为", ex: "He maintains that the plan works." },
+    { cat: "学术/雅思", w: "obesity", m: "肥胖", ex: "Obesity is a growing health issue." },
+    { cat: "学术/雅思", w: "priority", m: "优先；重点", ex: "Education should be a priority." },
+    { cat: "学术/雅思", w: "widespread", m: "普遍的；广泛的", ex: "The use of smartphones is widespread." },
+    { cat: "学术/雅思", w: "consumption", m: "消费；消耗", ex: "Energy consumption keeps rising." },
+    { cat: "学术/雅思", w: "legislation", m: "立法；法规", ex: "New legislation limits emissions." },
+    { cat: "学术/雅思", w: "perspective", m: "视角；观点", ex: "From an economic perspective, …" },
+    { cat: "学术/雅思", w: "undermine", m: "削弱", ex: "Stress can undermine performance." },
+    { cat: "学术/雅思", w: "vital", m: "至关重要的", ex: "Sleep is vital for memory." },
 ];
 
 const QUIZ = [
@@ -466,9 +546,82 @@ $("quiz-next").addEventListener("click", () => {
 });
 $("quiz-restart").addEventListener("click", qStart);
 
+// ---------- Daily check-in 每日打卡 ----------
+function todayStr() {
+    const d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+function dateStr(offsetDays) {
+    const d = new Date();
+    d.setDate(d.getDate() + offsetDays);
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+let checkins = store.get("checkins", []);
+
+function calcStreak() {
+    if (!checkins.length) return 0;
+    const set = new Set(checkins);
+    // 从今天（或昨天）开始往前数连续天数
+    let start = set.has(todayStr()) ? 0 : -1;
+    if (!set.has(todayStr()) && !set.has(dateStr(-1))) return 0;
+    let streak = 0, i = set.has(todayStr()) ? 0 : -1;
+    while (set.has(dateStr(i))) { streak++; i--; }
+    return streak;
+}
+function renderCheckin() {
+    const done = checkins.includes(todayStr());
+    $("streak-num").textContent = calcStreak();
+    const info = $("checkin-info");
+    info.textContent = done ? "✓ 今天已打卡，明天继续！" : "今天还没打卡";
+    info.classList.toggle("done", done);
+    const btn = $("checkin-btn");
+    btn.textContent = done ? "✓ 已打卡" : "✓ 今日打卡";
+    btn.disabled = done;
+    btn.style.opacity = done ? ".55" : "1";
+    // 最近 7 天
+    const names = ["日", "一", "二", "三", "四", "五", "六"];
+    const set = new Set(checkins);
+    let html = "";
+    for (let i = -6; i <= 0; i++) {
+        const ds = dateStr(i);
+        const wd = new Date(ds + "T12:00:00").getDay();
+        html += `<div class="week-day ${set.has(ds) ? "hit" : ""} ${i === 0 ? "today" : ""}">${names[wd]}</div>`;
+    }
+    $("week-row").innerHTML = html;
+    $("checkin-total").textContent = `累计打卡 ${checkins.length} 天`;
+}
+$("checkin-btn").addEventListener("click", () => {
+    const t = todayStr();
+    if (!checkins.includes(t)) {
+        checkins.push(t);
+        store.set("checkins", checkins);
+    }
+    renderCheckin();
+});
+
+// ---------- Word of the day 今日单词 ----------
+let dailyIdx = null;
+function renderDailyWord(idx) {
+    const card = FLASHCARDS[idx];
+    $("daily-word").textContent = card.w;
+    $("daily-meaning").textContent = card.m;
+    $("daily-example").textContent = "例句：" + card.ex;
+}
+(function initDailyWord() {
+    // 按日期轮换，每天固定一个词
+    const dayNum = Math.floor(Date.now() / 86400000);
+    dailyIdx = dayNum % FLASHCARDS.length;
+    renderDailyWord(dailyIdx);
+})();
+$("word-next").addEventListener("click", () => {
+    dailyIdx = (dailyIdx + 1) % FLASHCARDS.length;
+    renderDailyWord(dailyIdx);
+});
+
 // ---------- Init ----------
 fcFilter();
 fcShow();
 qStart();
+renderCheckin();
 const last = store.get("lastTab", "home");
 switchTab(last);

@@ -184,6 +184,34 @@ main { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 28px 20p
 .strat-card { background: #faf5ee; border-radius: 10px; padding: 16px; font-size: 13.5px; }
 .strat-card h4 { margin-bottom: 8px; color: var(--accent-deep); }
 
+/* ---- Daily check-in & word of the day ---- */
+.daily-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+.checkin-card, .word-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+.checkin-card h3, .word-card h3 { font-size: 15px; color: var(--accent-deep); margin-bottom: 12px; }
+.streak-display { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+.streak-num { font-size: 42px; font-weight: 700; color: var(--accent); line-height: 1; }
+.streak-label { font-size: 13px; color: var(--ink-soft); }
+.checkin-info { font-size: 13px; color: var(--ink-soft); margin-bottom: 12px; }
+.checkin-info.done { color: var(--good); }
+.checkin-total { font-size: 12px; color: var(--ink-soft); margin-top: 10px; }
+.week-row { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
+.week-day {
+    width: 34px; text-align: center;
+    font-size: 11px; color: var(--ink-soft);
+    background: #f8f1e9; border-radius: 8px; padding: 5px 0;
+}
+.week-day.hit { background: var(--accent); color: #fff; }
+.week-day.today { outline: 2px solid var(--accent); }
+.daily-word { font-size: 32px; font-weight: 700; color: var(--accent-deep); line-height: 1.2; }
+.daily-meaning { font-size: 14px; margin-top: 6px; }
+.daily-example { font-size: 13px; color: var(--ink-soft); font-style: italic; margin: 8px 0 14px; }
+
 /* ---- Flashcards ---- */
 .fc-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
 .fc-controls select { font-family: inherit; font-size: 14px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
@@ -277,4 +305,5 @@ main { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 28px 20p
     .hero h2 { font-size: 21px; }
     .tbl { font-size: 13px; }
     .tbl th, .tbl td { padding: 7px 8px; }
+    .daily-row { grid-template-columns: 1fr; }
 }
