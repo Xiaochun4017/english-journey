@@ -48,10 +48,10 @@ const CLASSROOM = [
     { en: "Could you repeat that, please?", cn: "能请你再说一遍吗？" },
     { en: "What does this word mean?", cn: "这个单词是什么意思？" },
     { en: "How do you spell it?", cn: "怎么拼写？" },
-    { en: "Could you speak more slowly?", cn: "能说慢一点吗？" },
+    { en: "Could you write that on the board?", cn: "能写在黑板上吗？" },
     { en: "I have a question about the assignment.", cn: "关于这个作业我有个问题。" },
     { en: "Is this correct? / Is this right?", cn: "这样对吗？" },
-    { en: "Sorry, I don't understand.", cn: "抱歉，我没听懂。" },
+    { en: "Sorry, I don't understand. Could you show me an example?", cn: "抱歉我没懂，能举个例子吗？" },
     { en: "Could you explain it in another way?", cn: "能换个方式解释吗？" },
     { en: "What should I read for next class?", cn: "下节课要读什么？" },
     { en: "When is the deadline?", cn: "截止日期是什么时候？" },
@@ -169,11 +169,11 @@ const HOTEL = [
 const DIRECTIONS = [
     { en: "Excuse me, how do I get to the train station?", cn: "请问火车站怎么走？（万能问路句）" },
     { en: "Is it far from here? / Can I walk there?", cn: "离这儿远吗？/ 能走着去吗？" },
-    { en: "Go straight and turn left at the second street.", cn: "直走，在第二个路口左转。（听懂这些指令）" },
+    { en: "Go straight and turn left at the second street.", cn: "直走，在第二个路口左转。（记住这些指令词）" },
     { en: "Could you show me on the map?", cn: "能在地图上指给我看吗？（听不懂时的救命题）" },
     { en: "Which bus goes to the city center?", cn: "哪路公交车去市中心？" },
     { en: "Is this the right way to the museum?", cn: "去博物馆是走这条路吗？" },
-    { en: "Sorry, I didn't catch that. Could you say it again?", cn: "抱歉没听清，能再说一遍吗？" },
+    { en: "Sorry, I didn't catch that. Could you write it down?", cn: "抱歉没跟上，能写下来给我看吗？" },
 ];
 
 const EMERGENCY = [
@@ -196,12 +196,7 @@ const IELTS_VOCAB = [
     "economic growth 经济增长", "carbon emission 碳排放", "digital literacy 数字素养",
 ];
 
-const ALPHABET_SOUNDS = {
-    A: "诶", B: "必", C: "西", D: "地", E: "衣", F: "诶夫", G: "记", H: "诶去",
-    I: "爱", J: "捷", K: "凯", L: "诶欧", M: "诶姆", N: "恩", O: "欧", P: "屁",
-    Q: "扣", R: "阿", S: "诶斯", T: "替", U: "优", V: "威", W: "达布溜",
-    X: "诶克斯", Y: "歪", Z: "贼德",
-};
+const ALPHABET = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 const NUMBERS = [
     "1 one", "2 two", "3 three", "4 four", "5 five", "6 six", "7 seven", "8 eight",
@@ -397,8 +392,8 @@ document.querySelectorAll(".path-card").forEach(c => c.addEventListener("click",
 // ---------- Build static content ----------
 (function build() {
     const alpha = $("alphabet");
-    if (alpha) alpha.innerHTML = Object.entries(ALPHABET_SOUNDS).map(([l, s]) =>
-        `<div class="letter"><b>${l} ${l.toLowerCase()}</b><span>${s}</span></div>`).join("");
+    if (alpha) alpha.innerHTML = ALPHABET.map(l =>
+        `<div class="letter"><b>${l} ${l.toLowerCase()}</b></div>`).join("");
 
     const nums = $("numbers");
     if (nums) nums.innerHTML = NUMBERS.map(n => {
@@ -471,7 +466,7 @@ function fcShow() {
     $("fc-meaning").textContent = card.m;
     $("fc-example").textContent = "例句：" + card.ex;
     $("fc-progress").textContent = `第 ${fcIdx + 1} / ${fcOrder.length} 张`;
-    const knownInCat = fcOrder.filter(i => fcKnown.has(cards[i].w)).length;
+    const knownInCat = fcOrder.filter(i => fcKnown.includes(cards[i].w)).length;
     $("fc-known-count").textContent = `✓ 已掌握 ${knownInCat} / ${fcOrder.length} 张`;
 }
 $("flashcard").addEventListener("click", () => $("flashcard").classList.toggle("flipped"));
@@ -618,10 +613,96 @@ $("word-next").addEventListener("click", () => {
     renderDailyWord(dailyIdx);
 });
 
-// ---------- Init ----------
-fcFilter();
-fcShow();
-qStart();
-renderCheckin();
-const last = store.get("lastTab", "home");
-switchTab(last);
+// ---------- Spelling practice 拼写练习 ----------
+let spOrder = [], spIdx = 0, spCat = "all", spCorrect = 0, spTotal = 0, spRevealed = false;
+let spMissed = store.get("spMissed", []); // 写错的词优先复习
+
+function spBuild() {
+    let pool = FLASHCARDS.filter(c => spCat === "all" || c.cat === spCat);
+    // 错词优先：排前面
+    const missed = pool.filter(c => spMissed.includes(c.w));
+    const rest = pool.filter(c => !spMissed.includes(c.w));
+    const shuffle = (arr) => {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    };
+    spOrder = shuffle(missed).concat(shuffle(rest)).map(c => FLASHCARDS.indexOf(c));
+    spIdx = 0; spCorrect = 0; spTotal = 0;
+}
+function spShow() {
+    if (!spOrder.length) { spBuild(); }
+    const card = FLASHCARDS[spOrder[spIdx]];
+    spRevealed = false;
+    $("sp-meaning").textContent = card.m;
+    // 提示：首字母 + 长度
+    const first = card.w.charAt(0).toUpperCase();
+    const blanks = card.w.split("").map(ch => (ch === " " || ch === "/" || ch === "-") ? ch : "_").join("");
+    $("sp-hint").textContent = `提示：${first}…（共 ${card.w.length} 个字母） ${blanks}`;
+    $("sp-progress").textContent = `第 ${spIdx + 1} / ${spOrder.length} 题`;
+    const input = $("sp-input");
+    input.value = "";
+    input.className = "sp-input";
+    input.disabled = false;
+    $("sp-feedback").textContent = "";
+    $("sp-feedback").className = "sp-feedback";
+    $("sp-check").classList.remove("hidden");
+    $("sp-score").textContent = `本轮：答对 ${spCorrect} / ${spTotal}`;
+    input.focus();
+}
+function spCheck() {
+    const card = FLASHCARDS[spOrder[spIdx]];
+    const input = $("sp-input");
+    const guess = input.value.trim().toLowerCase().replace(/\s+/g, " ");
+    const answer = card.w.toLowerCase();
+    if (!guess) return;
+    spTotal++;
+    if (guess === answer) {
+        spCorrect++;
+        input.className = "sp-input correct";
+        $("sp-feedback").textContent = "✓ 拼对了！" + (spRevealed ? "（看过答案，再来一遍加深记忆）" : "");
+        $("sp-feedback").className = "sp-feedback ok";
+        // 从错词本移除
+        spMissed = spMissed.filter(w => w !== card.w);
+        store.set("spMissed", spMissed);
+    } else {
+        input.className = "sp-input wrong";
+        $("sp-feedback").innerHTML = `✗ 正确拼写：<span class="sp-answer">${card.w}</span> — ${card.m}<br>${card.ex}`;
+        $("sp-feedback").className = "sp-feedback no";
+        if (!spMissed.includes(card.w)) { spMissed.push(card.w); store.set("spMissed", spMissed); }
+    }
+    input.disabled = true;
+    $("sp-check").classList.add("hidden");
+    $("sp-score").textContent = `本轮：答对 ${spCorrect} / ${spTotal}`;
+}
+function spNext() {
+    spIdx = (spIdx + 1) % spOrder.length;
+    spShow();
+}
+$("sp-check").addEventListener("click", spCheck);
+$("sp-input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        if ($("sp-check").classList.contains("hidden")) spNext();
+        else spCheck();
+    }
+});
+$("sp-reveal").addEventListener("click", () => {
+    const card = FLASHCARDS[spOrder[spIdx]];
+    spRevealed = true;
+    $("sp-feedback").innerHTML = `答案：<span class="sp-answer">${card.w}</span> — ${card.m}<br>${card.ex}（抄一遍再继续吧）`;
+    $("sp-feedback").className = "sp-feedback";
+    $("sp-input").value = card.w;
+    $("sp-check").classList.add("hidden");
+});
+$("sp-skip").addEventListener("click", spNext);
+
+// ---------- Init（分段保护：一段出错不影响其他功能） ----------
+function safeInit(label, fn) { try { fn(); } catch (err) { console.error("Init failed: " + label, err); } }
+
+safeInit("flashcards", () => { fcFilter(); fcShow(); });
+safeInit("spelling", () => { spBuild(); spShow(); });
+safeInit("quiz", qStart);
+safeInit("checkin", renderCheckin);
+safeInit("tab", () => switchTab(store.get("lastTab", "home")));
