@@ -27,6 +27,7 @@
         <button class="tab" data-tab="daily">🏘️ 日常生活</button>
         <button class="tab" data-tab="travel">✈️ 旅游</button>
         <button class="tab" data-tab="flashcards">📚 词汇卡</button>
+        <button class="tab" data-tab="spelling">✍️ 拼写练习</button>
         <button class="tab" data-tab="quiz">✏️ 自测</button>
     </nav>
 </header>
@@ -63,7 +64,7 @@
         <div class="path-card" data-jump="beginner">
             <span class="step">第 1 步</span>
             <h3>🌱 零基础起步</h3>
-            <p>26 个字母、音标入门、数字、颜色、打招呼。完全没学过也能看懂。</p>
+            <p>26 个字母、拼写规则、数字、颜色、打招呼。完全没学过也能看懂。</p>
         </div>
         <div class="path-card" data-jump="elementary">
             <span class="step">第 2 步</span>
@@ -118,27 +119,25 @@
     <div class="lesson">
         <h3>1. 字母表 Alphabet</h3>
         <div class="alphabet" id="alphabet"></div>
-        <p class="note">每个字母下方是「读音提示」（用中文近似音标注意，仅帮助记忆，准确发音请对照音标表）。</p>
+        <p class="note">大写和小写要一起记：A a、B b…… 书写时句子第一个字母和「我」（I）永远大写。</p>
     </div>
 
     <div class="lesson">
-        <h3>2. 音标入门 Phonetics（文字版）</h3>
+        <h3>2. 拼写规则 Spelling Rules（写字必备）</h3>
         <table class="tbl">
-            <thead><tr><th>音标</th><th>读音提示</th><th>例词</th><th>例词读音提示</th></tr></thead>
+            <thead><tr><th>规则</th><th>说明</th><th>例子</th></tr></thead>
             <tbody>
-                <tr><td>/iː/</td><td>长「衣」</td><td>see, tree</td><td>西—，初—</td></tr>
-                <tr><td>/ɪ/</td><td>短促「衣」</td><td>sit, big</td><td>西斯，比格</td></tr>
-                <tr><td>/e/</td><td>「哎」（扁口）</td><td>bed, ten</td><td>拜德，太恩</td></tr>
-                <tr><td>/æ/</td><td>「啊」张大嘴</td><td>cat, map</td><td>卡特，马普</td></tr>
-                <tr><td>/ɑː/</td><td>长「阿」</td><td>car, far</td><td>卡—，法—</td></tr>
-                <tr><td>/ɔː/</td><td>长「哦」</td><td>door, more</td><td>多—，莫—</td></tr>
-                <tr><td>/uː/</td><td>长「乌」</td><td>food, blue</td><td>福—德，布—鲁</td></tr>
-                <tr><td>/ʌ/</td><td>短「啊」放松</td><td>cup, sun</td><td>卡普，桑</td></tr>
-                <tr><td>/ɜː/</td><td>卷舌「儿」</td><td>bird, work</td><td>伯—德，沃—克</td></tr>
-                <tr><td>/ə/</td><td>轻读「呃」</td><td>about, sofa</td><td>呃拜乌特，叟呃发</td></tr>
+                <tr><td>句首大写</td><td>每个句子第一个字母大写</td><td><b>T</b>oday is Monday.</td></tr>
+                <tr><td>「我」永远大写</td><td>I 无论在哪里都大写</td><td>Tom and <b>I</b> are friends.</td></tr>
+                <tr><td>专有名词大写</td><td>人名、地名、星期、月份、语言</td><td><b>C</b>hina, <b>M</b>onday, <b>E</b>nglish</td></tr>
+                <tr><td>第三人称加 s</td><td>一般现在时，he/she/it 后动词加 s</td><td>She work<b>s</b> in a bank.</td></tr>
+                <tr><td>复数加 s/es</td><td>以 s/x/ch/sh 结尾加 es</td><td>book<b>s</b>, box<b>es</b>, watch<b>es</b></td></tr>
+                <tr><td>辅音+y 变 ies</td><td>city → cities，study → studies</td><td>two <b>cities</b>, she <b>studies</b></td></tr>
+                <tr><td>双写末尾字母</td><td>短音节动词加 ing/ed 前双写</td><td>stop → sto<b>pp</b>ing, sto<b>pp</b>ed</td></tr>
+                <tr><td>句末标点</td><td>陈述句用句号 .，疑问句用 ?</td><td>I like tea<b>.</b> / Do you like tea<b>?</b></td></tr>
             </tbody>
         </table>
-        <p class="note">学音标先记住 10 个元音就够入门；辅音大多和拼音接近（如 /b/ /p/ /m/ /f/）。</p>
+        <p class="note">写作顺序建议：先想中文 → 套「主语+动词」骨架 → 查词汇卡确认拼写 → 写完检查大写和标点。</p>
     </div>
 
     <div class="lesson">
@@ -320,22 +319,21 @@
         <table class="tbl">
             <thead><tr><th>科目</th><th>时长</th><th>内容</th><th>关键点</th></tr></thead>
             <tbody>
-                <tr><td>听力 Listening</td><td>约 30 分钟</td><td>4 部分 40 题</td><td>先读题预测答案类型（人名/数字/地点）</td></tr>
                 <tr><td>阅读 Reading</td><td>60 分钟</td><td>3 篇 40 题</td><td>先看题再读文，定位关键词</td></tr>
                 <tr><td>写作 Writing</td><td>60 分钟</td><td>Task 1（图表/书信）+ Task 2（议论文）</td><td>Task 2 占 2/3 分值，先写它</td></tr>
-                <tr><td>口语 Speaking</td><td>11–14 分钟</td><td>Part 1 问答 / Part 2 独白 / Part 3 讨论</td><td>流利度 &gt; 完美语法，多说别停</td></tr>
+                <tr><td>口语 Speaking</td><td>11–14 分钟</td><td>Part 1 问答 / Part 2 独白 / Part 3 讨论</td><td>可以改报纯笔试安排，重点抓读写</td></tr>
             </tbody>
         </table>
-        <div class="rule-box"><strong>评分 0–9 分：</strong>6 分=合格使用者，6.5–7=大部分学校要求线，7+ 属于良好。听力和阅读按对题数换算（约 30/40 → 7 分）。</div>
+        <div class="rule-box"><strong>评分 0–9 分：</strong>6 分=合格使用者，6.5–7=大部分学校要求线，7+ 属于良好。阅读按对题数换算（约 30/40 → 7 分）。</div>
     </div>
 
     <div class="lesson">
-        <h3>2. 四项备考策略</h3>
+        <h3>2. 三项备考策略（读写为主）</h3>
         <div class="strategy-grid">
-            <div class="strat-card"><h4>🎧 听力</h4><p>每天精听 1 篇剑桥真题：先盲听抓大意 → 逐句听写 → 对照原文查漏。注意单复数和拼写，错一个字母就丢分。</p></div>
-            <div class="strat-card"><h4>📖 阅读</h4><p>三步定位法：读题画关键词 → 回文定位同义替换 → 精读该句。同义替换是雅思阅读的核心考点（important ↔ crucial）。</p></div>
-            <div class="strat-card"><h4>✍️ 写作</h4><p>Task 2 背熟四段式模板（观点类/讨论类/利弊类各一）。考前至少动笔写 10 篇并找人批改，否则分数很难上 6。</p></div>
-            <div class="strat-card"><h4>🗣️ 口语</h4><p>按季度题库准备素材（一材多用）。Part 2 用「故事化」结构：时间地点人物事件感受。录音自查（用手机打字记录代替也可）。</p></div>
+            <div class="strat-card"><h4>📖 阅读</h4><p>三步定位法：读题画关键词 → 回文定位同义替换 → 精读该句。同义替换是雅思阅读的核心考点（important ↔ crucial）。做对一题是一题，全部文字功夫。</p></div>
+            <div class="strat-card"><h4>✍️ 写作</h4><p>Task 2 背熟四段式模板（观点类/讨论类/利弊类各一）。考前至少动笔写 10 篇并找人批改，否则分数很难上 6。写作是中国考生最容易拿分的项。</p></div>
+            <div class="strat-card"><h4>💬 口语（可选）</h4><p>如果目标学校不卡口语小分，可用「背熟素材 + 简单句」策略保底；也可以选择对口语要求更宽松的学校和国家的考试类型。</p></div>
+            <div class="strat-card"><h4>📅 规划</h4><p>选学校时优先看「总分要求」而非小分；雅思也提供机考，全程打字作答，读写练起来更顺手。</p></div>
         </div>
     </div>
 
@@ -484,6 +482,27 @@
         <button class="btn ghost" id="fc-next">下一个 →</button>
     </div>
     <p class="fc-known-count" id="fc-known-count"></p>
+</section>
+
+<!-- ============ SPELLING ============ -->
+<section class="panel" id="panel-spelling">
+    <h2 class="sec-title">✍️ 拼写练习</h2>
+    <p class="note" style="margin-bottom:16px">看中文意思，默写出英文单词/词组。写不出来就点「看答案」，下次它还会再来。</p>
+    <div class="sp-box" id="sp-box">
+        <p class="sp-progress" id="sp-progress"></p>
+        <div class="sp-prompt">
+            <div class="sp-meaning" id="sp-meaning"></div>
+            <div class="sp-hint" id="sp-hint"></div>
+        </div>
+        <input type="text" class="sp-input" id="sp-input" placeholder="在这里输入英文…" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <div class="sp-feedback" id="sp-feedback"></div>
+        <div class="sp-btns">
+            <button class="btn primary" id="sp-check">✓ 检查</button>
+            <button class="btn ghost" id="sp-reveal">看答案</button>
+            <button class="btn ghost" id="sp-skip">跳过 →</button>
+        </div>
+        <p class="sp-score" id="sp-score"></p>
+    </div>
 </section>
 
 <!-- ============ QUIZ ============ -->
